@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tv_hasil = (TextView) findViewById(R.id.tv_hasil);
-        btn_pilih_operasi = (Button) findViewById(R.id.btn_pilih_operasi);
-        btn_reset = (Button) findViewById(R.id.btn_reset);
-        edt_bil1 = (EditText) findViewById(R.id.edt_bil1);
-        edt_bil2 = (EditText) findViewById(R.id.edt_bil2);
+        tv_hasil = findViewById(R.id.tv_hasil);
+        btn_pilih_operasi = findViewById(R.id.btn_pilih_operasi);
+        btn_reset = findViewById(R.id.btn_reset);
+        edt_bil1 = findViewById(R.id.edt_bil1);
+        edt_bil2 = findViewById(R.id.edt_bil2);
 
 
         btn_pilih_operasi.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Double kalkulasi(Double bil1, Double bil2, String operasi) {
-        Double hasil = 0.0;
+        Double hasil = null;
 
         switch (operasi) {
             case "+":
@@ -81,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
                 String operasi = data.getStringExtra("operasi");
                 Double hasil = kalkulasi(bil1Value, bil2Value, operasi);
 
-                tv_hasil.setText(bil1Value + " " + operasi + " " + bil2Value + " = " + hasil );
+                String res = bil1Value + " " + operasi + " " + bil2Value + " = " + hasil;
+                tv_hasil.setText(res);
             }
         }
 

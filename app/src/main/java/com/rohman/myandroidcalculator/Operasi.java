@@ -6,26 +6,15 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 public class Operasi extends AppCompatActivity {
 
     String operasi = "";
-    Button btn_plus;
-    Button btn_minus;
-    Button btn_kali;
-    Button btn_bagi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operasi);
-
-        btn_plus = (Button) findViewById(R.id.btn_plus);
-        btn_minus = (Button) findViewById(R.id.btn_minus);
-        btn_kali = (Button) findViewById(R.id.btn_bagi);
-        btn_bagi = (Button) findViewById(R.id.btn_kali);
 
     }
 
