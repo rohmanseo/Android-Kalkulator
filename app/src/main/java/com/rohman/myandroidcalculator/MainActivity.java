@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,8 +35,17 @@ public class MainActivity extends AppCompatActivity {
         btn_pilih_operasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Operasi.class);
-                startActivityForResult(intent, 1);
+
+                if (TextUtils.isEmpty(edt_bil1.getText())) {
+                    edt_bil1.setError("Bilangan 1 Diperlukan");
+                } else if (TextUtils.isEmpty(edt_bil2.getText())) {
+                    edt_bil2.setError("Bilangan 2 Diperlukan");
+                } else {
+                    Intent intent = new Intent(MainActivity.this, Operasi.class);
+                    startActivityForResult(intent, 1);
+                }
+
+
             }
         });
 
@@ -72,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
         if (requestCode == 1) {
             if (resultCode == Activity.RESULT_OK) {
 

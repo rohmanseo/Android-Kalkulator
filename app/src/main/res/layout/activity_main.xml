@@ -8,36 +8,36 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bilangan 1"/>
+        android:text="@string/bilangan_1"/>
     <EditText
         android:id="@+id/edt_bil1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan Bilangan 1"/>
+        android:hint="@string/Hint_Bilangan_1"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bilangan 2"/>
+        android:text="@string/bilangan_2"/>
     <EditText
         android:id="@+id/edt_bil2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Masukkan Bilangan 2"/>
+        android:hint="@string/Hint_Bilangan_2"/>
     <Button
         android:id="@+id/btn_pilih_operasi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="pilih operasi"/>
+        android:text="@string/pilih_operasi"/>
     <TextView
         android:id="@+id/tv_hasil"
         android:layout_weight="1"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text=""/>
     <Button
         android:id="@+id/btn_reset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="reset"/>
+        android:text="@string/reset"/>
 </LinearLayout>

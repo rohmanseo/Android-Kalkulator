@@ -4,4 +4,10 @@
     <string name="minus">-</string>
     <string name="kali">x</string>
     <string name="bagi">/</string>
+    <string name="bilangan_1">Bilangan 1</string>
+    <string name="Hint_Bilangan_1">Masukkan Bilangan 1</string>
+    <string name="bilangan_2">Bilangan 2</string>
+    <string name="Hint_Bilangan_2">Masukkan Bilangan 2</string>
+    <string name="pilih_operasi">pilih operasi</string>
+    <string name="reset">reset</string>
 </resources>
