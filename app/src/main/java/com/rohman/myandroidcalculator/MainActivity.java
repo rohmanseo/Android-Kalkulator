@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView tv_hasil;
@@ -89,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
                 Double bil2Value = Double.valueOf(edt_bil2.getText().toString());
                 String operasi = data.getStringExtra("operasi");
                 Double hasil = kalkulasi(bil1Value, bil2Value, operasi);
-
-                String res = bil1Value + " " + operasi + " " + bil2Value + " = " + hasil;
+                DecimalFormat format = new DecimalFormat("0.#");
+                String res = format.format(bil1Value) + " " + operasi + " " + format.format(bil2Value) + " = " + format.format(hasil);
                 tv_hasil.setText(res);
             }
         }
