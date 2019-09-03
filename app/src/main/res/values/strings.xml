@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Android Calculator</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="kali">x</string>
+    <string name="bagi">/</string>
 </resources>
