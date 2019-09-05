@@ -40,13 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
                 if (TextUtils.isEmpty(edt_bil1.getText())) {
                     edt_bil1.setError("Bilangan 1 Diperlukan");
-                } else if (TextUtils.isEmpty(edt_bil2.getText())) {
+                }
+                if (TextUtils.isEmpty(edt_bil2.getText())) {
                     edt_bil2.setError("Bilangan 2 Diperlukan");
-                } else {
+                }
+                if (!TextUtils.isEmpty(edt_bil1.getText()) && !TextUtils.isEmpty(edt_bil1.getText())) {
                     Intent intent = new Intent(MainActivity.this, Operasi.class);
                     startActivityForResult(intent, 1);
                 }
-
 
             }
         });
